@@ -1,0 +1,13 @@
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+staticPodPath: "/etc/kubernetes/manifests"
+address: 127.0.0.1
+port: 10250
+authentication:
+  webhook:
+    enabled: false
+  anonymous:
+    enabled: true
+authorization:
+  mode: AlwaysAllow
+failSwapOn: false
